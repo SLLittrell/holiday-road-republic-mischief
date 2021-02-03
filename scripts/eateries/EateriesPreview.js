@@ -14,7 +14,6 @@ const eateriesContainer = document.querySelector('.eateryContainer')
 
 eventHub.addEventListener('eaterySelect', eaterySelectEvent => {
     if (eaterySelectEvent.detail.eatery !== "0") {
-        console.log('eaterySelectEvent.detail.eatery: ', eaterySelectEvent.detail.eatery);
         // const eateriesArray = useEateries()
         // console.log('eateriesArray: ', eateriesArray);
     }
