@@ -13,7 +13,10 @@ const eateriesContainer = document.querySelector('.eateryContainer')
 // }
 
 eventHub.addEventListener('eaterySelect', eaterySelectEvent => {
-    
+    if (eaterySelectEvent.detail.eatery !== "0") {
+        const eateriesArray = useEateries()
+        
+    }
 })
 
 
