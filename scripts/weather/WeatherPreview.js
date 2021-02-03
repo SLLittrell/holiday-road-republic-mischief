@@ -8,23 +8,23 @@ export const WeatherPreview = () => {
     getWeather()
     .then(() => {
         const weatherArray = useWeather()
-            renderWeather(weatherArray)
+            render(weatherArray)
     })
 
-    
-    const renderWeather = (weatherObject) => {
-        const weatherhtmlRep = `
-        <div class="weather">
-        <div>Day ${weather.dt}</div> ${weatherObject.main.map(mainobj => {
-            return `
-            <div>Temp ${weather.main.temp}</div>`
-        })}
-        </div>
-        `
-        weatherContainer.innerHTML = weatherhtmlRep
-    }
-    
 }
+//   debugger  
+const render= (weatherObject) => {
+const weatherhtmlRep = `
+        <div class="weather">
+            <div>${weatherObject.list.map(listobj => {
+                return `Feels like ${listobj.main.feels_like}<br>Hi ${listobj.main.temp_max}&#8457 Low ${listobj.main.temp_min}&#8457 <br>`
+            }).join(" ")}</div> 
+            </div>
+            `
+            weatherContainer.innerHTML = weatherhtmlRep
+        }
+        
+        // <div>Temp ${weatherObject.main.temp}</div>
 
 // eventHub.addEventListener("parkChosen", customEvent => {
 //    WeatherPreview()
