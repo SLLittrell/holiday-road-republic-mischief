@@ -11,7 +11,6 @@ eventHub.addEventListener("change", event => {
                 eatery: event.target.value
             }
         })
-        console.log(customEvent)
         eventHub.dispatchEvent(customEvent)
     }
 })
