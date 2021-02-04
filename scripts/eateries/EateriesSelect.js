@@ -3,13 +3,12 @@ import { getEateries, useEateries } from "./EateryProvider.js"
 const eventHub = document.querySelector('#container')
 const contentTarget = document.querySelector('.dropdown__eateries')
 
-
+// dispacthing dropdown change event
 eventHub.addEventListener("change", event => {
-    if (event.target.id === 'eateries__select') {
-        const selectedEatery = event.target.value
+    if (event.target.id === 'eaterySelect') {
         const customEvent = new CustomEvent('eaterySelect', {
             detail: {
-                eatery: selectedEatery
+                eatery: event.target.value
             }
         })
         console.log(customEvent)
@@ -17,7 +16,7 @@ eventHub.addEventListener("change", event => {
     }
 })
 
-
+// getting the eateries array and calling the render function with the array as a parameter
 export const eaterySelect = () => {
     getEateries()
     .then(() => {
@@ -25,7 +24,7 @@ export const eaterySelect = () => {
         render(eateries)
     })
 }
-
+// function that iterates through the eateries array and renders specific data using string interpolation
 const render = eateriesCollection => {
     contentTarget.innerHTML = `
         <select class="dropdown" id="eaterySelect">
