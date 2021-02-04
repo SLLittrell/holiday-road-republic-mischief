@@ -18,6 +18,25 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 2px;
 }
 
+
+
+.middleContainer {
+	display: flex;
+}
+
+.dropdown {
+	flex: 1 1 0px;
+}
+
+.contentContainer {
+	display: flex;
+	flex: 1 1 0px;
+}
+
+.savedItinerary {
+	flex: 1 1 0px;
+}
+
 dialog {
 	float: right;
 	width: 40em;
