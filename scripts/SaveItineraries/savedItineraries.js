@@ -2,6 +2,7 @@ import { getItineraries, saveItineraries, useItineraries } from "./SaveDataProvi
 
 const eventHub = document.querySelector("#container")
 const contentTarget = document.querySelector(".savedItinerary")
+const warningElement = document.querySelector(".saveWarning")
 
 let savedItinerary = {
   "savedPark": "",
@@ -22,9 +23,14 @@ eventHub.addEventListener("parkChosen", e => {
 })
 
 eventHub.addEventListener("saveButtonClick", e => {
-  saveItineraries(savedItinerary)
-    .then(getItineraries)
-    .then(displayItineraries)
+  if(savedItinerary.savedPark !== "" && savedItinerary.savedEatery !== "" && savedItinerary.savedAttraction !== ""){
+    warningElement.innerHTML = ""
+    saveItineraries(savedItinerary)
+      .then(getItineraries)
+      .then(displayItineraries)
+  }else{
+    warningElement.innerHTML = "Finish your itinerary before saving!"
+  }
 })
 
 export const displayItineraries = () => {
