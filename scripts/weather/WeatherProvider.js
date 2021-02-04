@@ -7,7 +7,7 @@ let city = ""
 export const useWeather = () => weather
 
 export const getWeather = () => {
-    return fetch(`http://api.openweathermap.org/data/2.5/find?q=${city}&units=imperial&appid=${settings.weatherKey}`)
+    return fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${settings.weatherKey}`)
         .then(response => response.json())
         .then(
             parsedWeather => {
