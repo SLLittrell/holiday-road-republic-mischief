@@ -6,7 +6,7 @@ const contentTarget = document.querySelector(".dropdown__bizarre")
 const renderAttractionDropdown = (attractionArray) => {
     contentTarget.innerHTML = `
         <select id="bizarreSelect">
-        <option value="0">Please select an attraction</option>
+        <option value="">Please select an attraction</option>
         ${
             attractionArray.map(attractionObj => {
                 return `<option value="${attractionObj.name}">${attractionObj.name}</option>`
