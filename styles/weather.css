@@ -1,0 +1,13 @@
+.weatherPreview {
+    display: flex;
+    background-color: aqua;
+}
+.weather {
+    display: flex;
+    border:solid black;
+    flex-direction: row;
+}
+
+.weather__cityState {
+    font-weight: bold;
+}
