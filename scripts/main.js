@@ -1,17 +1,14 @@
-console.log("Welcome to the main module")
-import { eaterySelect } from "./eateries/EateriesSelect.js"
 import './eateries/EateriesPreview.js'
-
-eaterySelect()
-
-
-
-
-import { attractionSelect } from "./attractions/AttractionSelect.js"
-attractionSelect()
 import "./attractions/AttractionPreview.js"
 import "./parks/ParkPreview.js"
+import "./SaveItineraries/savedItineraries.js"
+import { eaterySelect } from "./eateries/EateriesSelect.js"
+import { attractionSelect } from "./attractions/AttractionSelect.js"
 import { parkDropdown } from "./parks/ParkSelect.js"
+import { saveButton } from "./SaveItineraries/saveButton.js"
 
+eaterySelect()
+attractionSelect()
 parkDropdown()
+saveButton()
 

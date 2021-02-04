@@ -1,7 +1,7 @@
 const contentTarget = document.querySelector(".saveItinerary")
 const eventHub = document.querySelector("#container")
 
-const saveButton = () => {
+export const saveButton = () => {
   contentTarget.innerHTML = `
     <button id="saveItinerary">Save Itinerary</button>
   `
