@@ -8,6 +8,7 @@ import { attractionSelect } from "./attractions/AttractionSelect.js"
 import { parkDropdown } from "./parks/ParkSelect.js"
 import { saveButton } from "./SaveItineraries/saveButton.js"
 import {WeatherPreview} from "./weather/WeatherPreview.js"
+import { getWeather } from './weather/WeatherProvider.js'
 
 eaterySelect()
 attractionSelect()
@@ -16,4 +17,4 @@ attractionSelect()
 parkDropdown()
 saveButton()
 displayItineraries()
-
+getWeather()

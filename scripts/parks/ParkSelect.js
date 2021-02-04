@@ -27,22 +27,25 @@ const render = parkOptions => {
 eventHub.addEventListener("change", e => {
   if (e.target.id === "parkSelect") {
     const parkName = e.target.value
+    let latitude = ""
+    let longitude = ""
     let parkCity = ""
-    let parkState = ""
     getParks()
       .then(() => {
         const parkList = useParks().data
         for (const park of parkList) {
           if (park.fullName === parkName) {
+            latitude = park.latitude
+            longitude = park.longitude
             parkCity = park.addresses[0].city
-            parkState = park.states
           }
         }
         const customEvent = new CustomEvent("parkChosen", {
           detail: {
             "parkName": parkName,
-            "parkCity": parkCity,
-            "parkState": parkState
+            "parkCity" : parkCity,
+            "latitude" : latitude,
+            "longitude" : longitude
           }
         })
         eventHub.dispatchEvent(customEvent)
