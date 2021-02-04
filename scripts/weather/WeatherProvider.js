@@ -13,7 +13,6 @@ export const getWeather = () => {
         .then(response => response.json())
         .then(
             parsedWeather => {
-            console.log(parsedWeather)
             weather = parsedWeather
         })
 
