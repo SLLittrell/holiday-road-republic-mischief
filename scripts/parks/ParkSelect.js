@@ -30,6 +30,7 @@ eventHub.addEventListener("change", e => {
     let latitude = ""
     let longitude = ""
     let parkCity = ""
+    let parkState = ""
     getParks()
       .then(() => {
         const parkList = useParks().data
@@ -38,6 +39,7 @@ eventHub.addEventListener("change", e => {
             latitude = park.latitude
             longitude = park.longitude
             parkCity = park.addresses[0].city
+            parkState = park.states
           }
         }
         const customEvent = new CustomEvent("parkChosen", {
@@ -45,7 +47,8 @@ eventHub.addEventListener("change", e => {
             "parkName": parkName,
             "parkCity" : parkCity,
             "latitude" : latitude,
-            "longitude" : longitude
+            "longitude" : longitude,
+            "parkState" : parkState
           }
         })
         eventHub.dispatchEvent(customEvent)
