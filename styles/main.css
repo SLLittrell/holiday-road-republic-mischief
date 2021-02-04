@@ -22,10 +22,15 @@ h1,h2,h3,h4,h5,h6 {
 	display: flex;
 }
 
-.contentContainer {
-	display: flex;
+.dropdown {
+	flex: 1 1 0px;
 }
 
-/* .weather {
+.contentContainer {
 	display: flex;
-} */
+	flex: 1 1 0px;
+}
+
+.savedItinerary {
+	flex: 1 1 0px;
+}

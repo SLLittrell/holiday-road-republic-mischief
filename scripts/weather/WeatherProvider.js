@@ -3,11 +3,13 @@ import { settings } from "../Settings.js"
 
 
 let weather = []
-let city = ""
+let lat = ""
+let lon = ""
+
 export const useWeather = () => weather
 
 export const getWeather = () => {
-    return fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${settings.weatherKey}`)
+    return fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely,hourly,alerts,current&appid=${settings.weatherKey}`)
         .then(response => response.json())
         .then(
             parsedWeather => {
@@ -20,6 +22,7 @@ export const getWeather = () => {
 const eventHub = document.querySelector("#container")
 
 eventHub.addEventListener("parkChosen", customEvent => {
-     city = customEvent.detail.parkCity
-     return city
+     lat = customEvent.detail.latitude
+     lon = customEvent.detail.longitude
+
  })
