@@ -38,7 +38,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 dialog {
-	float: right;
+	display: flex;
 	width: 40em;
 	height: 20em;
 }
