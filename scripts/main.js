@@ -1,5 +1,9 @@
-
 console.log("Welcome to the main module")
+import { eaterySelect } from "./eateries/EateriesSelect.js"
+import './eateries/EateriesPreview.js'
+
+eaterySelect()
+
 
 
 
@@ -10,3 +14,4 @@ import "./parks/ParkPreview.js"
 import { parkDropdown } from "./parks/ParkSelect.js"
 
 parkDropdown()
+
