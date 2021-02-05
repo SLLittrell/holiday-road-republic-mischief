@@ -26,7 +26,7 @@ export const eaterySelect = () => {
 // function that iterates through the eateries array and renders specific data using string interpolation
 const render = eateriesCollection => {
     contentTarget.innerHTML = `
-        <select class="dropdown" id="eaterySelect">
+        <select id="eaterySelect">
             <option value="">Please select an eatery...</option>
             ${eateriesCollection.map(eateriesObject => `<option value="${eateriesObject.businessName}">${eateriesObject.businessName}</option>`).join("")
         }
