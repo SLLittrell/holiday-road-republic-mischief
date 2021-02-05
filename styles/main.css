@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
-
+@import "./weather.css";
 /*Typography
 --------------------------------------------------------------*/
 body,
@@ -26,6 +26,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .dropdown {
 	flex: 1 1 0px;
+
 }
 
 #eaterySelect, 
@@ -35,8 +36,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .itineraryPreview {
+	display: flex;
+	flex-direction: column;
 	flex: 2 1 0px;
 	text-align: center;
+	
 }
 
 .contentContainer {
