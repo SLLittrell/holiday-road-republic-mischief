@@ -7,9 +7,12 @@
 .weather {
     display: flex;
     flex-direction: column;
+    justify-self: center;
     padding: 10px;
     border-radius: 5px;
-    background-color:rgb(144, 236, 248);
+    background-color:rgba(144, 236, 248, 0.555);
+    margin:0 auto;
+    display:block
 
 }
 
@@ -29,5 +32,6 @@
     background-color:rgb(232, 246, 248);
     margin: 5px;
     width: 25%;
+    padding: 2px;
     
 }

@@ -1,14 +1,35 @@
 .dropdown {
-	flex: 1 1 0px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 select {
-    background-color: tan;
+    background-color: rgba(210, 180, 140, 0.808);
     width: 60%;
+    font-weight: bolder;
+    border-radius: 5px;
+    margin:0 auto;
+    display:block;
+    margin-bottom: 10px;
+
+}
+option {
+    font-weight: bolder;
+    
 }
 
 #saveItinerary {
     background-color: rgb(31, 161, 31);
     font-weight: bold;
     border: green;
+    margin:0 auto;
+    display:block;
+    border-radius: 5px;
+    
+
+}
+.dropdown__nationalPark {
+    align-content: center;
 }
