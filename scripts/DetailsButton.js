@@ -17,7 +17,6 @@ eventHub.addEventListener("click", event => {
             id: event.target.id
         }
     })
-    console.log(customEvent.detail.id)
     eventHub.dispatchEvent(customEvent)
     
 }

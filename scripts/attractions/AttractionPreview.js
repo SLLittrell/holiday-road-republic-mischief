@@ -22,6 +22,6 @@ eventHub.addEventListener('DetailsClickedEvent', event => {
         const attractionsArray = useAttractions()
         const attractionObj = attractionsArray.find(attractionObj => attractionObj.name === attractionName)
         contentTarget.innerHTML += `
-        <dialog open>${attractionObj.description} Located in ${attractionObj.city}, ${attractionObj.state}</dialog>`
+        <dialog class="attractionDialog" open>${attractionObj.description} Located in ${attractionObj.city}, ${attractionObj.state}</dialog>`
     }
 }) 

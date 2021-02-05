@@ -37,8 +37,26 @@ h1,h2,h3,h4,h5,h6 {
 	flex: 1 1 0px;
 }
 
-dialog {
-	display: flex;
-	width: 40em;
-	height: 20em;
-}
+
+
+/* Harlin's CSS */
+
+.eateryDialog {
+	position: fixed;
+	top: 10%;
+	right: 25%;
+	width: 300px;
+	height: auto;
+	border: 3px solid #73AD21;
+  }
+
+.attractionDialog {
+	position: fixed;
+	top: 10%;
+	left: 25%;
+	width: 300px;
+	height: auto;
+	border: 3px solid #73AD21;
+  }
+
+
