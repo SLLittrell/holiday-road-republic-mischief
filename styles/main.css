@@ -67,7 +67,7 @@ h1,h2,h3,h4,h5,h6 {
 .eateryDialog {
 	position: fixed;
 	top: 10%;
-	right: 25%;
+	left: 25%;
 	width: 300px;
 	height: auto;
 	border: 3px solid #73AD21;
@@ -76,7 +76,7 @@ h1,h2,h3,h4,h5,h6 {
 .attractionDialog {
 	position: fixed;
 	top: 10%;
-	left: 25%;
+	right: 25%;
 	width: 300px;
 	height: auto;
 	border: 3px solid #73AD21;
