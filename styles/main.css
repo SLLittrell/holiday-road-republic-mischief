@@ -26,17 +26,29 @@ h1,h2,h3,h4,h5,h6 {
 	flex: 1 1 0px;
 }
 
+#eaterySelect, 
+#bizarreSelect, 
+#parkSelect {
+	width: 70%;
+}
+
+.itineraryPreview {
+	flex: 2 1 0px;
+	text-align: center;
+}
+
 .contentContainer {
 	display: flex;
 	flex: 1 1 0px;
+	justify-content: space-around;
 }
 
 .savedItinerary {
 	flex: 1 1 0px;
 	border: 1px solid black;
-	background-color: #7ec850;
 	border-radius: 5px;
 	text-align: center;
+	background-color: #7ec850;
 }
 
 .itineraryCard {
