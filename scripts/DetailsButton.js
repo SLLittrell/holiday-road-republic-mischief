@@ -8,6 +8,10 @@ export const eateriesDetailsButton = () => {
 
 }
 
+export const parksDetailsButton = () => {
+    return `<button id="parksDetail" class="detail">Details</button>`
+}
+
 const eventHub = document.querySelector("#container")
 
 eventHub.addEventListener("click", event => {
