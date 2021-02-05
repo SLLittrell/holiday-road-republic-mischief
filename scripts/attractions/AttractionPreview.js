@@ -16,12 +16,21 @@ eventHub.addEventListener("attractionSelected", event => {
             return attractionName = event.detail.chosenAttraction
         })
 
+
+const dialogContainer = document.querySelector(".dialogBox")
+
 eventHub.addEventListener('DetailsClickedEvent', event => {
     if (event.detail.id === 'attractionDetail') {
-        const contentTarget = document.querySelector('.attractionContainer')
         const attractionsArray = useAttractions()
         const attractionObj = attractionsArray.find(attractionObj => attractionObj.name === attractionName)
-        contentTarget.innerHTML += `
-        <dialog open>${attractionObj.description} Located in ${attractionObj.city}, ${attractionObj.state}</dialog>`
+        dialogContainer.innerHTML += `
+        <dialog open>${attractionObj.description} Located in ${attractionObj.city}, ${attractionObj.state}<br>
+        <button id="closeButton">Close</button>
+        </dialog>`
     }
 }) 
+
+eventHub.addEventListener("click", event => {
+    if (event.target.id === "closeButton") {
+        dialogContainer.innerHTML = ``
+    }})
