@@ -17,20 +17,35 @@ h1,h2,h3,h4,h5,h6 {
   font-family: "Patua One", serif;
   letter-spacing: 2px;
 }
-
+main {
+	background-color: rgb(136, 184, 136);
+}
 .middleContainer {
 	display: flex;
 }
 
 .dropdown {
-	flex: 1 1 0px;
+	flex: 1 1 300px;
+
+}
+
+header {
+	background-color: green;
+	text-align: center;
 }
 
 .contentContainer {
 	display: flex;
 	flex: 1 1 0px;
+	flex-direction: column;
+}
+.itineraryPreview {
+	display: flex;
+	flex-direction: column;
 }
 
 .savedItinerary {
 	flex: 1 1 0px;
+	background-color: rgb(6, 136, 6);
+	
 }

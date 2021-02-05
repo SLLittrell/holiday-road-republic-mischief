@@ -1,13 +1,31 @@
 .weatherPreview {
     display: flex;
-    background-color: aqua;
+    border: solid black;
+    background-color: cadetblue;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex-basis: 100%;
 }
 .weather {
     display: flex;
-    border:solid black;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .weather__cityState {
     font-weight: bold;
+    text-align: center;
+}
+.dailyWeather {
+    display: flex;
+}
+
+.weatherDay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border:groove;
+    background-color: aqua;
+    margin: 10px;
+    
 }
