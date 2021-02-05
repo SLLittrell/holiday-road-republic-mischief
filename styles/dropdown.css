@@ -1,0 +1,14 @@
+.dropdown {
+	flex: 1 1 0px;
+}
+
+select {
+    background-color: tan;
+    width: 60%;
+}
+
+#saveItinerary {
+    background-color: rgb(31, 161, 31);
+    font-weight: bold;
+    border: green;
+}
