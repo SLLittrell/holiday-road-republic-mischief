@@ -33,4 +33,15 @@ h1,h2,h3,h4,h5,h6 {
 
 .savedItinerary {
 	flex: 1 1 0px;
+	border: 1px solid black;
+	background-color: #7ec850;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.itineraryCard {
+	margin: 10px;
+	background-color: tan;
+	padding: 5px;
+	border-radius: 5px;
 }
