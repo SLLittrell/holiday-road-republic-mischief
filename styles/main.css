@@ -18,17 +18,66 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 2px;
 }
 
+
+
 .middleContainer {
 	display: flex;
 }
 
 
 
+#eaterySelect, 
+#bizarreSelect, 
+#parkSelect {
+	width: 70%;
+}
+
+.itineraryPreview {
+	flex: 2 1 0px;
+	text-align: center;
+}
+
 .contentContainer {
 	display: flex;
 	flex: 1 1 0px;
+	justify-content: space-around;
 }
 
 .savedItinerary {
 	flex: 1 1 0px;
+	border: 1px solid black;
+	border-radius: 5px;
+	text-align: center;
+	background-color: #7ec850;
 }
+
+.itineraryCard {
+	margin: 10px;
+	background-color: tan;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+
+
+/* Harlin's CSS */
+
+.eateryDialog {
+	position: fixed;
+	top: 10%;
+	left: 25%;
+	width: 300px;
+	height: auto;
+	border: 3px solid #73AD21;
+  }
+
+.attractionDialog {
+	position: fixed;
+	top: 10%;
+	right: 25%;
+	width: 300px;
+	height: auto;
+	border: 3px solid #73AD21;
+  }
+
+

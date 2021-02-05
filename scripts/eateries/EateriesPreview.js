@@ -27,7 +27,7 @@ eventHub.addEventListener('DetailsClickedEvent', event => {
         const eateriesArray = useEateries()
         const eateryObject = eateriesArray.find(eateryObject => eateryObject.businessName === eateryBusiness)
         dialogContainer.innerHTML += `
-        <dialog open>${eateryObject.description} Located in ${eateryObject.city}, ${eateryObject.state}<br>
+        <dialog class="eateryDialog" open>${eateryObject.description} Located in ${eateryObject.city}, ${eateryObject.state}<br>
         <button id="eateryCloseButton">Close</button>
         </dialog>
         `

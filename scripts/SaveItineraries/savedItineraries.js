@@ -39,12 +39,15 @@ export const displayItineraries = () => {
       const itineraryList = useItineraries()
 
       contentTarget.innerHTML = `
-        <div class="itineraryCard">
+        <div class="itineraryList">
+          <h2>Saved Itineraries</h2>
           ${itineraryList.map(itinerary => {
             return `
-            Park: ${itinerary.savedPark}<br>
-            Attraction: ${itinerary.savedAttraction}<br>
-            Eatery: ${itinerary.savedEatery}<br>
+            <div class="itineraryCard">
+              Park: ${itinerary.savedPark}<br>
+              Attraction: ${itinerary.savedAttraction}<br>
+              Eatery: ${itinerary.savedEatery}<br>
+            </div>
             `
           }).join("")}
         </div>
