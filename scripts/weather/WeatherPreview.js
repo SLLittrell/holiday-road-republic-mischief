@@ -24,7 +24,7 @@ const weatherhtmlRep = `
                 return `
                    <div class="weatherDay"> ${new Date(dailyobj.dt * 1000).toLocaleDateString("en-US")}<br>
                     ${dailyobj.weather.map(weatherobj => {
-                        return `${weatherobj.description}`})}
+                        return `${weatherobj.description}`})}<br>
                 Feels like: ${Math.round(dailyobj.feels_like.day)}&#8457<br>
                 Hi: ${Math.round(dailyobj.temp.max)}&#8457 <br>
                 Low: ${Math.round(dailyobj.temp.min)}&#8457</div><br>`
