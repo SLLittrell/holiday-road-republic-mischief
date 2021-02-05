@@ -1,20 +1,22 @@
 .weatherPreview {
     display: flex;
-    border: solid black;
-    background-color: cadetblue;
-    margin-top: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
-    flex-basis: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .weather {
     display: flex;
     flex-direction: column;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:rgb(144, 236, 248);
+
 }
 
 .weather__cityState {
     font-weight: bold;
     text-align: center;
+    margin-bottom: 5px;
 }
 .dailyWeather {
     display: flex;
@@ -23,9 +25,9 @@
 .weatherDay {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    border:groove;
-    background-color: aqua;
-    margin: 10px;
+    justify-content: left;
+    background-color:rgb(232, 246, 248);
+    margin: 5px;
+    width: 25%;
     
 }

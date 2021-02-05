@@ -17,35 +17,47 @@ h1,h2,h3,h4,h5,h6 {
   font-family: "Patua One", serif;
   letter-spacing: 2px;
 }
-main {
-	background-color: rgb(136, 184, 136);
-}
+
 .middleContainer {
 	display: flex;
 }
 
 .dropdown {
-	flex: 1 1 300px;
+	flex: 1 1 0px;
 
 }
 
-header {
-	background-color: green;
+#eaterySelect, 
+#bizarreSelect, 
+#parkSelect {
+	width: 70%;
+}
+
+.itineraryPreview {
+	display: flex;
+	flex-direction: column;
+	flex: 2 1 0px;
 	text-align: center;
+	
 }
 
 .contentContainer {
 	display: flex;
 	flex: 1 1 0px;
-	flex-direction: column;
-}
-.itineraryPreview {
-	display: flex;
-	flex-direction: column;
+	justify-content: space-around;
 }
 
 .savedItinerary {
 	flex: 1 1 0px;
-	background-color: rgb(6, 136, 6);
-	
+	border: 1px solid black;
+	border-radius: 5px;
+	text-align: center;
+	background-color: #7ec850;
+}
+
+.itineraryCard {
+	margin: 10px;
+	background-color: tan;
+	padding: 5px;
+	border-radius: 5px;
 }
