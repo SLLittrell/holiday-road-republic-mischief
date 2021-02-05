@@ -40,7 +40,6 @@ export const displayItineraries = () => {
 
       contentTarget.innerHTML = `
         <div class="itineraryList">
-          <h2>Saved Itineraries</h2>
           ${itineraryList.map(itinerary => {
             return `
             <div class="itineraryCard">

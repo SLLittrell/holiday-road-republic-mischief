@@ -1,0 +1,33 @@
+.weatherPreview {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.weather {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:rgb(144, 236, 248);
+
+}
+
+.weather__cityState {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.dailyWeather {
+    display: flex;
+}
+
+.weatherDay {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    background-color:rgb(232, 246, 248);
+    margin: 5px;
+    width: 25%;
+    
+}
