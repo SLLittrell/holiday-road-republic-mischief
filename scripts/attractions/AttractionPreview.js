@@ -17,7 +17,7 @@ eventHub.addEventListener("attractionSelected", event => {
         })
 
 
-const dialogContainer = document.querySelector(".dialogBox")
+const dialogContainer = document.querySelector(".attractionDialogBox")
 
 eventHub.addEventListener('DetailsClickedEvent', event => {
     if (event.detail.id === 'attractionDetail') {
@@ -25,12 +25,12 @@ eventHub.addEventListener('DetailsClickedEvent', event => {
         const attractionObj = attractionsArray.find(attractionObj => attractionObj.name === attractionName)
         dialogContainer.innerHTML += `
         <dialog open>${attractionObj.description} Located in ${attractionObj.city}, ${attractionObj.state}<br>
-        <button id="closeButton">Close</button>
+        <button id="attractionCloseButton">Close</button>
         </dialog>`
     }
 }) 
 
 eventHub.addEventListener("click", event => {
-    if (event.target.id === "closeButton") {
+    if (event.target.id === "attractionCloseButton") {
         dialogContainer.innerHTML = ``
     }})
