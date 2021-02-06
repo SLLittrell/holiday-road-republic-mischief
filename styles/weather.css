@@ -12,7 +12,8 @@
     border-radius: 5px;
     background-color:#00968796;
     margin:0 auto;
-    display:block
+    display:block;
+    width: 100%;
 
 }
 
@@ -29,15 +30,16 @@
 }
 .dailyWeather {
     display: flex;
+    justify-content: space-evenly;
 }
 
 .weatherDay {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    background-color:rgb(232, 246, 248);
+    background-color:rgb(155, 237, 248);
     margin: 5px;
-    width: 25%;
+    width: 30%;
     padding: 2px;
     border-radius: 5px;
     
