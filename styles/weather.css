@@ -16,10 +16,16 @@
 
 }
 
+.weather h2 {
+    font-size: 20px;
+    margin:0;
+}
+
 .weather__cityState {
     font-weight: bold;
     text-align: center;
     margin-bottom: 5px;
+    font-size: 15px;
 }
 .dailyWeather {
     display: flex;
@@ -33,5 +39,6 @@
     margin: 5px;
     width: 25%;
     padding: 2px;
+    border-radius: 5px;
     
 }
