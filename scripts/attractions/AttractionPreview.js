@@ -22,7 +22,7 @@ eventHub.addEventListener("attractionSelected", event => {
 const dialogContainer = document.querySelector(".attractionDialogBox")
 
 eventHub.addEventListener('DetailsClickedEvent', event => {
-    if (event.detail.id === event.detail.id) {
+    if (event.detail.className === "attraction") {
         const attractionsArray = useAttractions()
         const attractionObj = attractionsArray.find(attractionObj => attractionObj.name === event.detail.id)
         dialogContainer.innerHTML += `

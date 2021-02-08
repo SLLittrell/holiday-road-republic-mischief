@@ -11,7 +11,7 @@ eventHub.addEventListener("attractionSelected", event => {
 
     // Function to render Details button using attraction name
 export const attractionDetailsButton = () => {
-    return `<button id="${attraction}" class="detail">Details</button>`
+    return `<button id="${attraction}" class="detail__attraction">Details</button>`
 
 }
 
@@ -27,7 +27,7 @@ eventHub.addEventListener("eaterySelect", event => {
 })
     // Function to render Details button using attraction name
 export const eateriesDetailsButton = () => {
-    return `<button id="${eatery}" class="detail">Details</button>`
+    return `<button id="${eatery}" class="detail__eatery">Details</button>`
 
 }
 
@@ -40,11 +40,14 @@ export const parksDetailsButton = () => {
 
 // General
 eventHub.addEventListener("click", event => {
-    if (event.target.className === "detail") {
+    
+    if (event.target.className.includes("detail")) {
+    let [prefix, type] = event.target.className.split("__")
     const customEvent = new CustomEvent("DetailsClickedEvent", {
-        detail: {
-            id: event.target.id
-        }
+    detail: {
+        id: event.target.id,
+        className: type
+    }
     })
     eventHub.dispatchEvent(customEvent)
     

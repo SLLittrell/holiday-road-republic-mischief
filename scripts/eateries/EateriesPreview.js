@@ -22,7 +22,9 @@ eventHub.addEventListener('eaterySelect', eaterySelectEvent => {
 const dialogContainer = document.querySelector(".eateryDialogBox")
 
 eventHub.addEventListener('DetailsClickedEvent', event => {
-    if (event.detail.id === event.detail.id) {
+    console.log("clicked")
+    // debugger
+    if (event.detail.className === "eatery") {
         const contentTarget = document.querySelector('.eateryContainer')
         const eateriesArray = useEateries()
         const eateryObject = eateriesArray.find(eateryObject => eateryObject.businessName === event.detail.id)
