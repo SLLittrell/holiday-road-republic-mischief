@@ -21,7 +21,9 @@ eventHub.addEventListener('eaterySelect', eaterySelectEvent => {
 // This function listens for the details button to be clicked and then renders a description and address for the selected eatery.
 const dialogContainer = document.querySelector(".eateryDialogBox")
 eventHub.addEventListener('DetailsClickedEvent', event => {
-    if (event.detail.id === event.detail.id) {
+    console.log("clicked")
+    // debugger
+    if (event.detail.className === "eatery") {
         const contentTarget = document.querySelector('.eateryContainer')
         const eateriesArray = useEateries()
         const eateryObject = eateriesArray.find(eateryObject => eateryObject.businessName === event.detail.id)
