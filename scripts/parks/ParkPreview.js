@@ -19,8 +19,9 @@ eventHub.addEventListener('DetailsClickedEvent', e => {
     if (e.detail.id === 'parksDetail') {
         const parksArray = useParks().data
         const parksObject = parksArray.find(parksObject => parksObject.fullName === parkName)
+        const parkImage = parksObject.images.find(imageObj => imageObj.credit === "NPS Photo")
         dialogContainer.innerHTML += `
-        <dialog class="parksDialog" open>${parksObject.description}<br> Located in ${parksObject.states}<br>
+        <dialog class="parksDialog" open><img class="parkImages" src="${parkImage.url}"><br>${parksObject.description}<br> Located in ${parksObject.states}<br>
         <div class="npsLink">For more information visit: <a href="${parksObject.url}">${parksObject.url}</a></div>
         <button id="parksCloseButton">Close</button>
         </dialog>

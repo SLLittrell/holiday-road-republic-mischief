@@ -145,8 +145,14 @@ footer {
 
 /* Harlin's CSS */
 
+.parkImages {
+	width: 20%;
+	border-radius: 5px;
+}
+
 .eateryDialog {
 	position: fixed;
+	text-align: left;
 	top: 10%;
 	left: 25%;
 	width: 300px;
@@ -166,6 +172,7 @@ footer {
 
 .attractionDialog {
 	position: fixed;
+	text-align: left;
 	top: 10%;
 	right: 25%;
 	width: 300px;
