@@ -9,9 +9,9 @@ let  attractionName= ""
 
 eventHub.addEventListener("attractionSelected", event => {
     
-            contentTarget.innerHTML =  `
+            contentTarget.innerHTML +=  `
                 ${event.detail.chosenAttraction}
-                ${attractionDetailsButton()}
+                ${attractionDetailsButton()}</br>
             `
             return attractionName = event.detail.chosenAttraction
         })
@@ -20,9 +20,9 @@ eventHub.addEventListener("attractionSelected", event => {
 const dialogContainer = document.querySelector(".attractionDialogBox")
 
 eventHub.addEventListener('DetailsClickedEvent', event => {
-    if (event.detail.id === 'attractionDetail') {
+    if (event.detail.id === event.detail.id) {
         const attractionsArray = useAttractions()
-        const attractionObj = attractionsArray.find(attractionObj => attractionObj.name === attractionName)
+        const attractionObj = attractionsArray.find(attractionObj => attractionObj.name === event.detail.id)
         dialogContainer.innerHTML += `
         <dialog class="attractionDialog" open>${attractionObj.description} Located in ${attractionObj.city}, ${attractionObj.state}<br>
         <button id="attractionCloseButton">Close</button>
