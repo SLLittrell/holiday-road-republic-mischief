@@ -20,15 +20,33 @@ eventHub.addEventListener('eaterySelect', eaterySelectEvent => {
 
 // This function listens for the details button to be clicked and then renders a description and address for the selected eatery.
 const dialogContainer = document.querySelector(".eateryDialogBox")
-
 eventHub.addEventListener('DetailsClickedEvent', event => {
     if (event.detail.id === 'eateriesDetail') {
         const contentTarget = document.querySelector('.eateryContainer')
         const eateriesArray = useEateries()
         const eateryObject = eateriesArray.find(eateryObject => eateryObject.businessName === eateryBusiness)
+        const accessible = () => {
+            // debugger  
+            if (eateryObject.ameneties.wheelchairAccessible === true ) { 
+            return '<img class="wheelchair" src="../images/9285.png">'
+            }
+            else {
+                return ""
+            }
+        }
+        const ameneties = () => {
+            // debugger  
+            if (eateryObject.ameneties.restrooms === true ) { 
+            return '<img class="restrooms" src="../images/toilet.png">'
+        }
+            else {
+                return ""
+            }
+    }
         dialogContainer.innerHTML += `
-        <dialog class="eateryDialog" open>${eateryObject.description} Located in ${eateryObject.city}, ${eateryObject.state}<br>
+        <dialog class="eateryDialog" open>${eateryObject.description} <br> Located in ${eateryObject.city}, ${eateryObject.state}<br>
         <button id="eateryCloseButton">Close</button>
+        <div class="accessible">${accessible()} ${ameneties()}</div>
         </dialog>
         `
     }

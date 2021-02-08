@@ -153,6 +153,16 @@ footer {
 	height: auto;
 	border: 3px solid #73AD21;
   }
+.accessible {
+	text-align: right;
+}
+.restrooms {
+	width: 10%;
+}
+
+.wheelchair {
+	width: 10%;
+}
 
 .attractionDialog {
 	position: fixed;

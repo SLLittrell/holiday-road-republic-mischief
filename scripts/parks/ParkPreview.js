@@ -21,6 +21,7 @@ eventHub.addEventListener('DetailsClickedEvent', e => {
         const parksObject = parksArray.find(parksObject => parksObject.fullName === parkName)
         dialogContainer.innerHTML += `
         <dialog class="parksDialog" open>${parksObject.description}<br> Located in ${parksObject.states}<br>
+        <div class="npsLink">For more information visit: <a href="${parksObject.url}">${parksObject.url}</a></div>
         <button id="parksCloseButton">Close</button>
         </dialog>
         `
