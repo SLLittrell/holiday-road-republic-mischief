@@ -11,7 +11,7 @@ let eateryBusiness = ''
 // Listening for the change event and rendering the dropdown selection itself.
 eventHub.addEventListener('eaterySelect', eaterySelectEvent => {
     if (eaterySelectEvent.detail.eatery !== "0") {
-        eateriesContainer.innerHTML = `
+        eateriesContainer.innerHTML += `
         ${eaterySelectEvent.detail.eatery}
         ${eateriesDetailsButton()}`
         return eateryBusiness = eaterySelectEvent.detail.eatery
