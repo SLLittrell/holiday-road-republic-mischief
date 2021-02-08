@@ -8,7 +8,7 @@ let parkName = ""
 
 eventHub.addEventListener("parkChosen", e => {
   contentTarget.innerHTML = `
-    ${e.detail.parkName}
+    ${e.detail.parkName}<br>
     ${parksDetailsButton()}
     `
   parkName = e.detail.parkName

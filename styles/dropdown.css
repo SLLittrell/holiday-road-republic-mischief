@@ -1,8 +1,9 @@
 .dropdown {
 	display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:flex-start;
     text-align: center;
+    padding-top: 5%;
 }
 
 select {
@@ -13,7 +14,7 @@ select {
     margin:0 auto;
     display:block;
     margin-bottom: 10px;
-
+    height: 75%;
 }
 option {
     font-weight: bolder;
@@ -21,7 +22,7 @@ option {
 }
 
 #saveItinerary {
-    background-color: rgb(31, 161, 31);
+    background-color: rgb(52, 187, 52);
     font-weight: bold;
     border: green;
     margin:0 auto;

@@ -10,28 +10,37 @@
     justify-self: center;
     padding: 10px;
     border-radius: 5px;
-    background-color:rgba(144, 236, 248, 0.555);
+    background-color:#00968796;
     margin:0 auto;
-    display:block
+    display:block;
+    width: 100%;
 
+}
+
+.weather h2 {
+    font-size: 20px;
+    margin:0;
 }
 
 .weather__cityState {
     font-weight: bold;
     text-align: center;
     margin-bottom: 5px;
+    font-size: 15px;
 }
 .dailyWeather {
     display: flex;
+    justify-content: space-evenly;
 }
 
 .weatherDay {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    background-color:rgb(232, 246, 248);
+    background-color:rgb(155, 237, 248);
     margin: 5px;
-    width: 25%;
+    width: 30%;
     padding: 2px;
+    border-radius: 5px;
     
 }
