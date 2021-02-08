@@ -11,7 +11,7 @@ let eateryBusiness = ''
 // Listening for the change event and rendering the dropdown selection itself.
 eventHub.addEventListener('eaterySelect', eaterySelectEvent => {
     if (eaterySelectEvent.detail.eatery !== "0") {
-        eateriesContainer.innerHTML = `
+        eateriesContainer.innerHTML += `
         ${eaterySelectEvent.detail.eatery}
         ${eateriesDetailsButton()}`
         return eateryBusiness = eaterySelectEvent.detail.eatery
@@ -21,10 +21,10 @@ eventHub.addEventListener('eaterySelect', eaterySelectEvent => {
 // This function listens for the details button to be clicked and then renders a description and address for the selected eatery.
 const dialogContainer = document.querySelector(".eateryDialogBox")
 eventHub.addEventListener('DetailsClickedEvent', event => {
-    if (event.detail.id === 'eateriesDetail') {
+    if (event.detail.id === event.detail.id) {
         const contentTarget = document.querySelector('.eateryContainer')
         const eateriesArray = useEateries()
-        const eateryObject = eateriesArray.find(eateryObject => eateryObject.businessName === eateryBusiness)
+        const eateryObject = eateriesArray.find(eateryObject => eateryObject.businessName === event.detail.id)
         const accessible = () => {
             // debugger  
             if (eateryObject.ameneties.wheelchairAccessible === true ) { 

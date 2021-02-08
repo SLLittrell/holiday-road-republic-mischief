@@ -7,6 +7,7 @@ const contentTarget = document.querySelector(".attractionContainer")
 
 let  attractionName= ""
 
+// Adds selected attraction and Details button to DOM when attraction is selected
 eventHub.addEventListener("attractionSelected", event => {
     
             contentTarget.innerHTML +=  `
@@ -17,6 +18,7 @@ eventHub.addEventListener("attractionSelected", event => {
         })
 
 
+// 
 const dialogContainer = document.querySelector(".attractionDialogBox")
 
 eventHub.addEventListener('DetailsClickedEvent', event => {
