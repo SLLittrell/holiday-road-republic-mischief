@@ -24,7 +24,6 @@ eventHub.addEventListener('DetailsClickedEvent', event => {
     console.log("clicked")
     // debugger
     if (event.detail.className === "eatery") {
-        const contentTarget = document.querySelector('.eateryContainer')
         const eateriesArray = useEateries()
         const eateryObject = eateriesArray.find(eateryObject => eateryObject.businessName === event.detail.id)
         const accessible = () => {

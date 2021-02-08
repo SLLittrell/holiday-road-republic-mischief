@@ -143,22 +143,21 @@ footer {
 
 
 
-/* Harlin's CSS */
-
 .parkImages {
-	width: 20%;
+	width: 50%;
 	border-radius: 5px;
 }
 
 .eateryDialog {
 	position: fixed;
 	text-align: left;
-	top: 10%;
+	top: 20%;
 	left: 25%;
 	width: 300px;
 	height: auto;
 	border: 3px solid #73AD21;
-  }
+}
+
 .accessible {
 	text-align: right;
 }
@@ -173,11 +172,17 @@ footer {
 .attractionDialog {
 	position: fixed;
 	text-align: left;
-	top: 10%;
+	top: 20%;
 	right: 25%;
 	width: 300px;
 	height: auto;
 	border: 3px solid #73AD21;
-  }
+}
 
-
+.parksDialog {
+	position: fixed;
+	top: 10%;
+	width: 30%;
+	height: auto;
+	border: 3px solid #73AD21;
+}
