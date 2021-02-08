@@ -22,10 +22,10 @@ eventHub.addEventListener('eaterySelect', eaterySelectEvent => {
 const dialogContainer = document.querySelector(".eateryDialogBox")
 
 eventHub.addEventListener('DetailsClickedEvent', event => {
-    if (event.detail.id === 'eateriesDetail') {
+    if (event.detail.id === event.detail.id) {
         const contentTarget = document.querySelector('.eateryContainer')
         const eateriesArray = useEateries()
-        const eateryObject = eateriesArray.find(eateryObject => eateryObject.businessName === eateryBusiness)
+        const eateryObject = eateriesArray.find(eateryObject => eateryObject.businessName === event.detail.id)
         dialogContainer.innerHTML += `
         <dialog class="eateryDialog" open>${eateryObject.description} Located in ${eateryObject.city}, ${eateryObject.state}<br>
         <button id="eateryCloseButton">Close</button>
