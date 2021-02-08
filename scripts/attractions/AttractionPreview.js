@@ -25,9 +25,19 @@ eventHub.addEventListener('DetailsClickedEvent', event => {
     if (event.detail.id === event.detail.id) {
         const attractionsArray = useAttractions()
         const attractionObj = attractionsArray.find(attractionObj => attractionObj.name === event.detail.id)
+        const ameneties = () => {
+            // debugger  
+            if (attractionObj.ameneties.restrooms === true ) { 
+            return '<img class="restrooms" src="../images/toilet.png">'
+            }
+            else {
+                return ""
+            }
+        }
         dialogContainer.innerHTML += `
         <dialog class="attractionDialog" open>${attractionObj.description} Located in ${attractionObj.city}, ${attractionObj.state}<br>
         <button id="attractionCloseButton">Close</button>
+        <div class="accessible">${ameneties()}</div>
         </dialog>`
     }
 }) 
