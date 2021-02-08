@@ -3,13 +3,13 @@ const eventHub = document.querySelector("#container")
 // Attractions
 let attraction = ""
 
-// Saves the name of the chosen attractions to attraction variable
+    // Saves the name of the chosen attractions to attraction variable
 eventHub.addEventListener("attractionSelected", event => {
     attraction = event.detail.chosenAttraction
 
 })
 
-// Function to render Details button using attraction name
+    // Function to render Details button using attraction name
 export const attractionDetailsButton = () => {
     return `<button id="${attraction}" class="detail">Details</button>`
 
@@ -18,8 +18,16 @@ export const attractionDetailsButton = () => {
 
 
 // Eateries
+let eatery = ""
+
+    // Saves the name of the chosen attractions to attraction variable
+eventHub.addEventListener("eaterySelect", event => {
+    eatery = event.detail.eatery
+
+})
+    // Function to render Details button using attraction name
 export const eateriesDetailsButton = () => {
-    return `<button id="eateriesDetail" class="detail">Details</button>`
+    return `<button id="${eatery}" class="detail">Details</button>`
 
 }
 
