@@ -11,8 +11,8 @@ let  attractionName= ""
 eventHub.addEventListener("attractionSelected", event => {
     
             contentTarget.innerHTML +=  `
-                ${event.detail.chosenAttraction}
-                ${attractionDetailsButton()}</br>
+                ${event.detail.chosenAttraction}<br>
+                ${attractionDetailsButton()}<br>
             `
             return attractionName = event.detail.chosenAttraction
         })

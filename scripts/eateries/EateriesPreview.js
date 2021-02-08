@@ -12,8 +12,8 @@ let eateryBusiness = ''
 eventHub.addEventListener('eaterySelect', eaterySelectEvent => {
     if (eaterySelectEvent.detail.eatery !== "0") {
         eateriesContainer.innerHTML += `
-        ${eaterySelectEvent.detail.eatery}
-        ${eateriesDetailsButton()}`
+        ${eaterySelectEvent.detail.eatery}<br>
+        ${eateriesDetailsButton()}<br>`
         return eateryBusiness = eaterySelectEvent.detail.eatery
     }
 })
