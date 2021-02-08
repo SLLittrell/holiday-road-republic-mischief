@@ -7,11 +7,12 @@ const warningElement = document.querySelector(".saveWarning")
 let savedItinerary = {
   "savedPark": "",
   "savedEatery": "",
-  "savedAttraction": ""
+  "savedAttraction": []
 }
 
 eventHub.addEventListener("attractionSelected", e => {
-  savedItinerary.savedAttraction = e.detail.chosenAttraction
+  savedItinerary.savedAttraction.push(e.detail.chosenAttraction)
+
 })
 
 eventHub.addEventListener("eaterySelect", e => {
@@ -23,7 +24,7 @@ eventHub.addEventListener("parkChosen", e => {
 })
 
 eventHub.addEventListener("saveButtonClick", e => {
-  if(savedItinerary.savedPark !== "" && savedItinerary.savedEatery !== "" && savedItinerary.savedAttraction !== ""){
+  if(savedItinerary.savedPark !== "" && savedItinerary.savedEatery !== "" && savedItinerary.savedAttraction !== []){
     warningElement.innerHTML = ""
     saveItineraries(savedItinerary)
       .then(getItineraries)
@@ -37,14 +38,13 @@ export const displayItineraries = () => {
   getItineraries()
     .then(() => {
       const itineraryList = useItineraries()
-
       contentTarget.innerHTML = `
         <div class="itineraryList">
           ${itineraryList.map(itinerary => {
             return `
             <div class="itineraryCard">
               Park: ${itinerary.savedPark}<br>
-              Attraction: ${itinerary.savedAttraction}<br>
+              Attraction: ${itinerary.savedAttraction.map((x) =>  {return x}).join("<br>Attraction: ")}<br>
               Eatery: ${itinerary.savedEatery}<br>
             </div>
             `
