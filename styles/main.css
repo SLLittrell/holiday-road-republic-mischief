@@ -111,6 +111,7 @@ footer {
 }
 
 .attractionContainer, .eateryContainer {
+	text-align: left;
 	font-weight: bolder;
 }
 
@@ -134,7 +135,12 @@ footer {
 	line-height: 2;
 }
 
-.detail {
+.detail__attraction, 
+.detail__eatery, 
+.detail,
+#attractionCloseButton,
+#eateryCloseButton
+{
 	font-weight: bolder;
 	border-radius: 5px;
 	margin-left: 10px;

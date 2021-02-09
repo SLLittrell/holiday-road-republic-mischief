@@ -12,8 +12,8 @@ let eateryBusiness = ''
 eventHub.addEventListener('eaterySelect', eaterySelectEvent => {
     if (eaterySelectEvent.detail.eatery !== "0") {
         eateriesContainer.innerHTML += `
-        ${eaterySelectEvent.detail.eatery}
-        ${eateriesDetailsButton()}`
+        ${eaterySelectEvent.detail.eatery}<br>
+        ${eateriesDetailsButton()}<br>`
         return eateryBusiness = eaterySelectEvent.detail.eatery
     }
 })
@@ -26,6 +26,7 @@ eventHub.addEventListener('DetailsClickedEvent', event => {
     if (event.detail.className === "eatery") {
         const eateriesArray = useEateries()
         const eateryObject = eateriesArray.find(eateryObject => eateryObject.businessName === event.detail.id)
+        //Added accessibility icons and restroom icon to dialog box/details
         const accessible = () => {
             // debugger  
             if (eateryObject.ameneties.wheelchairAccessible === true ) { 
