@@ -19,6 +19,7 @@ eventHub.addEventListener('DetailsClickedEvent', e => {
     if (e.detail.id === 'parksDetail') {
         const parksArray = useParks().data
         const parksObject = parksArray.find(parksObject => parksObject.fullName === parkName)
+        //Gets first image from NPS api and will render in details componant
         const parkImage = parksObject.images.find(imageObj => imageObj.credit.includes("NPS"))
         dialogContainer.innerHTML += `
         <dialog class="parksDialog" open><img class="parkImages" src="${parkImage.url}"><br>${parksObject.description}<br> Located in ${parksObject.states}<br>

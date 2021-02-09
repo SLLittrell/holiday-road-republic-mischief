@@ -11,8 +11,8 @@ let  attractionName= ""
 eventHub.addEventListener("attractionSelected", event => {
     
             contentTarget.innerHTML +=  `
-                ${event.detail.chosenAttraction}
-                ${attractionDetailsButton()}</br>
+                ${event.detail.chosenAttraction}<br>
+                ${attractionDetailsButton()}<br>
             `
             return attractionName = event.detail.chosenAttraction
         })
@@ -25,6 +25,7 @@ eventHub.addEventListener('DetailsClickedEvent', event => {
     if (event.detail.className === "attraction") {
         const attractionsArray = useAttractions()
         const attractionObj = attractionsArray.find(attractionObj => attractionObj.name === event.detail.id)
+        //added REstroom icon to dialog box/details
         const ameneties = () => {
             // debugger  
             if (attractionObj.ameneties.restrooms === true ) { 
