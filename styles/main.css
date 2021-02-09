@@ -111,25 +111,10 @@ footer {
 	flex: 1 1 0px;
 	justify-content: space-around;
 }
-
-.attractionBox, .eateryBox {
-	background-color: tan;
-    border: solid green;
-    width: 50%;
-    margin-top: 2%;
-}
-
-.eateryBox {
-	margin-left: 5%;
-}
-
 .attractionContainer, .eateryContainer {
 	font-weight: bolder;
 	text-align: left;
 	width: 40%;
-	width: 95%;
-    padding-bottom: 3%;
-    padding-left: 3%;
 }
 
 .savedItineraryContainer {
@@ -148,8 +133,7 @@ footer {
 	font-weight: bolder;
 	border: solid #404040;
 	border-width: thin;
-	text-align: left;
-	line-height: 2;
+
 }
 
 .detail {
