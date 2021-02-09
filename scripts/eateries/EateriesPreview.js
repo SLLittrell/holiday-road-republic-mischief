@@ -27,6 +27,7 @@ eventHub.addEventListener('DetailsClickedEvent', event => {
         const contentTarget = document.querySelector('.eateryContainer')
         const eateriesArray = useEateries()
         const eateryObject = eateriesArray.find(eateryObject => eateryObject.businessName === event.detail.id)
+        //Added accessibility icons and restroom icon to dialog box/details
         const accessible = () => {
             // debugger  
             if (eateryObject.ameneties.wheelchairAccessible === true ) { 
