@@ -39,6 +39,7 @@ export const parksDetailsButton = () => {
 
 
 // General
+    //Dispatches custom event when someone clicks Detail button 
 eventHub.addEventListener("click", event => {
     
     if (event.target.className.includes("detail")) {

@@ -18,7 +18,7 @@ eventHub.addEventListener("attractionSelected", event => {
         })
 
 
-// 
+//Renders description, city, state, and amenities to DOM when Details is clicked 
 const dialogContainer = document.querySelector(".attractionDialogBox")
 
 eventHub.addEventListener('DetailsClickedEvent', event => {
@@ -42,6 +42,7 @@ eventHub.addEventListener('DetailsClickedEvent', event => {
     }
 }) 
 
+// Closes dialog box when Close is clicked
 eventHub.addEventListener("click", event => {
     if (event.target.id === "attractionCloseButton") {
         dialogContainer.innerHTML = ``
