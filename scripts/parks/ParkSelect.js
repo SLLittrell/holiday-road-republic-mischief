@@ -3,6 +3,7 @@ import { getParks, useParks } from "./ParkProvider.js"
 const contentTarget = document.querySelector(".dropdown__nationalPark")
 const eventHub = document.querySelector("#container")
 
+//renders the park dropdown
 export const parkDropdown = () => {
   getParks()
     .then(() => {
@@ -11,6 +12,7 @@ export const parkDropdown = () => {
   })
 }
 
+//renders options in dropdown
 const render = parkOptions => {
   contentTarget.innerHTML = `
     <select id="parkSelect">
@@ -24,6 +26,7 @@ const render = parkOptions => {
   `
 }
 
+//event listener for the choosing a park and sends data to listeners
 eventHub.addEventListener("change", e => {
   if (e.target.id === "parkSelect") {
     const parkName = e.target.value

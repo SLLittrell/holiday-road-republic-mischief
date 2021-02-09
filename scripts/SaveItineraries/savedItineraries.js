@@ -4,26 +4,32 @@ const eventHub = document.querySelector("#container")
 const contentTarget = document.querySelector(".savedItinerary")
 const warningElement = document.querySelector(".saveWarning")
 
+//obj that is going to be saved
 let savedItinerary = {
   "savedPark": "",
   "savedEatery": [],
   "savedAttraction": []
 }
 
+//whenever attraction is selected, changes the savedAttraction array
 eventHub.addEventListener("attractionSelected", e => {
   savedItinerary.savedAttraction.push(e.detail.chosenAttraction)
 
 })
 
+//whenever eatery is selected, changes the savedEatery array
 eventHub.addEventListener("eaterySelect", e => {
   savedItinerary.savedEatery.push(e.detail.eatery)
 })
 
+//whenever park is selected, changes the savedPark string
 eventHub.addEventListener("parkChosen", e => {
   savedItinerary.savedPark = e.detail.parkName
 })
 
+//button event listener to save itinerary
 eventHub.addEventListener("saveButtonClick", e => {
+  //button can only be clicked if everything has a value
   if(savedItinerary.savedPark !== "" && savedItinerary.savedEatery !== [] && savedItinerary.savedAttraction !== []){
     warningElement.innerHTML = ""
     saveItineraries(savedItinerary)
@@ -34,6 +40,7 @@ eventHub.addEventListener("saveButtonClick", e => {
   }
 })
 
+//puts itineraries into DOM
 export const displayItineraries = () => {
   getItineraries()
     .then(() => {

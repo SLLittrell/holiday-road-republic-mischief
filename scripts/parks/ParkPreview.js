@@ -6,6 +6,7 @@ const dialogContainer = document.querySelector(".parkDialogBox")
 
 let parkName = ""
 
+//listens for park to be chosen in dropdown and displays it in preview along with details button
 eventHub.addEventListener("parkChosen", e => {
   contentTarget.innerHTML = `
     ${e.detail.parkName}<br>
@@ -15,6 +16,7 @@ eventHub.addEventListener("parkChosen", e => {
   
 })
 
+//when details button is clicked, park information is shown
 eventHub.addEventListener('DetailsClickedEvent', e => {
     if (e.detail.id === 'parksDetail') {
         const parksArray = useParks().data
@@ -30,6 +32,7 @@ eventHub.addEventListener('DetailsClickedEvent', e => {
     }
 })
 
+//close button for dialog box
 eventHub.addEventListener("click", event => {
     if (event.target.id === "parksCloseButton") {
         dialogContainer.innerHTML = ``
